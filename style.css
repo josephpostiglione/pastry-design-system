@@ -1,13 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i&display=swap');
+
+/*=================================================
+Colors Component
+=================================================*/
+
+html {
+    --color-skyblue: #9DD7F4;
+    --color-skyblue-light: #BDE9FF;
+    --color-skyblue-dark: #5B8EA8;
+
+    --color-coral: #F7B6BD;
+    --color-coral-light: #FFD6DA;
+    --color-coral-dark: #AB6D73;
+
+    --color-sand:#FFF8F0;
+    --color-sand-dark: #403E3C;
+    --color-disabled-grey: #E6DFD8;
+
+}
+
+
 /*=================================================
 Typography Component
 =================================================*/
 
 html {
-    color: #403E3C;
+    --font-primary: 'Lato', Helvetica, sans-serif;
+    --font-secondary: 'Playfair Display', "Times New Roman", serif;
+
+    background-color: var(--color-sand);
+    color: var(--color-sand-dark);
+    font-family: var(--font-primary);
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-style: italic;
 }
 
 a {
-    color: #5B8EA8;
+    color: var(--color-skyblue-dark);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-skyblue-dark);
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.example-font-lato {
+    font-family: var(--font-primary);
+}
+
+.example-font-playfair {
+    font-family: var(--font-secondary);
+    font-style: italic;
 }
 
 /*=================================================
@@ -15,7 +74,7 @@ Header Component
 =================================================*/
 
 header {
-    background-color: #F7B6BD;
+    background-color: var(--color-coral);
     padding: 2rem;
 }
 
@@ -24,6 +83,19 @@ Footer Component
 =================================================*/
 
 footer {
-    background-color: #FFD6DA;
+    background-color: var(--color-coral-light);
     padding: 2rem;
+}
+
+/*=================================================
+Master Layout Component
+=================================================*/
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: 40rem;
+    margin: auto;
 }
