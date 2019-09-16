@@ -16,12 +16,11 @@ html {
     --color-sand:#FFF8F0;
     --color-sand-dark: #403E3C;
     --color-disabled-grey: #E6DFD8;
-
 }
 
 
 /*=================================================
-Typography Component
+Typography
 =================================================*/
 
 html {
@@ -96,6 +95,6 @@ body {
 }
 
 main {
-    max-width: 40rem;
     margin: auto;
+    max-width: 40rem;
 }
