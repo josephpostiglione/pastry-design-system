@@ -54,7 +54,7 @@ h1 {
     font-family: var(--font-secondary);
     font-size: var(--size-six-up);
     letter-spacing: .1em;
-    margin-top: 1rem;
+    margin: 1rem 0 .5rem;
 }
 
 h2 {
@@ -207,6 +207,146 @@ p {
         --size-ratio: 1.333;  /*==Major Second for mobile, Perfect Fourth for desktop==*/
      } 
 }
+
+/*=================================================
+Button Component
+=================================================*/
+
+.link-button {
+    border: 2px solid var(--color-coral);
+    border-radius: .4rem;
+    color: var(--color-coral);
+    display: inline-block;
+    margin: 1rem;
+    padding: .5rem 1rem;
+}
+
+.link-button:visited {
+    color: var(--color-coral);
+}
+
+.link-button:hover {
+    background-color: var(--color-coral);
+    color: var(--color-sand);
+    text-shadow: none;
+}
+
+.link-button:focus {
+    outline-color: var(--color-skyblue);
+}
+
+.link-button:active {
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    font-weight: normal;
+}
+
+.link-button-hero {
+    background-color: var(--color-coral);
+    box-shadow: none;
+    font-size: var(--size-one-up);
+    padding: .75rem 2rem;
+}
+
+.link-button-hero:visited {
+    color: var(--color-sand);
+}
+
+.link-button-hero:hover {
+    box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+}
+
+.link-button-hero:active {
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+}
+
+.link-button-hero-secondary {
+    background-color: var(--color-skyblue);
+    border: 2px solid var(--color-skyblue);
+}
+
+.link-button-hero-secondary:visited {
+    background-color: var(--color-skyblue);
+}
+
+.link-button-tertiary {
+    border: 2px solid var(--color-skyblue-light);
+    box-shadow: none;
+    color: var(--color-skyblue);
+}
+
+.link-button-tertiary:visited {
+    color: var(--color-skyblue);
+}
+
+.link-button-tertiary:hover {
+    background-color: var(--color-skyblue);
+    border: 2px solid var(--color-skyblue);
+    color: var(--color-sand);
+}
+
+.link-button-tertiary:focus {
+    outline-color: var(--color-coral);
+}
+
+/*=================================================
+Accordion Component
+=================================================*/
+
+summary {
+    background-color: var(--color-coral);
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    color: var(--color-sand);
+    font-size: var(--size-two-up);
+    padding: .5rem;
+}
+
+summary::-webkit-details-marker {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+}
+
+summary:focus {
+    outline: none;
+}
+
+details[open] summary::-webkit-details-marker  {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+details {
+    border: 2px solid var(--color-coral);
+    border-radius: .4rem;
+    margin: 1rem;
+}
+
+details div {
+    padding: .5rem 2rem;
+}
+
+details div p {
+    border-bottom: 1px solid var(--color-coral);
+    color: var(--color-coral);
+    padding: 1rem 0;
+}
+
+.summary-secondary {
+    background-color: var(--color-skyblue);
+}
+
+.details-secondary {
+    border: 2px solid var(--color-skyblue);
+}
+
+.details-secondary p {
+    border-bottom: 1px solid var(--color-skyblue);
+    color: var(--color-skyblue);
+}
+
+
 
 /*=================================================
 Header Component
