@@ -67,13 +67,11 @@
         
         <h2>Accordions</h2>
 
-        <h3>Primary</h3>
-
         <figure>
 
             <details>
         
-                <summary>Accordion</summary>
+                <summary>Primary</summary>
                 
                 <div>
                 
@@ -87,15 +85,25 @@
                 
             </details>
             
-        </figure>
-
-        <h3>Secondary</h3>
-
-        <figure>
-
             <details class="details-secondary">
         
-                <summary class="summary-secondary">Accordion</summary>
+                <summary class="summary-secondary">Secondary</summary>
+                
+                <div>
+                
+                    <p>Example 1</p>
+            
+                    <p>Example 2</p>
+
+                    <p>Example 3</p>
+                    
+                </div>
+                
+            </details>
+            
+            <details class="details-tertiary">
+        
+                <summary class="summary-tertiary">Tertiary</summary>
                 
                 <div>
                 
@@ -111,26 +119,22 @@
             
         </figure>
 
-        <h3>Tertiary</h3>
+        <h2>Modal Dialog</h2>
 
         <figure>
 
-            <details class="details-tertiary">
-        
-                <summary class="summary-tertiary">Accordion</summary>
-                
-                <div>
-                
-                    <p>Example 1</p>
-            
-                    <p>Example 2</p>
+            <button id="open-modal" type="button">Open Modal</button>
 
-                    <p>Example 3</p>
-                    
-                </div>
+            <dialog id="modal-demo">
                 
-            </details>
-            
+                <p class="paragraph-tertiary">Optional label</p>
+                
+                <h2>Modal Heading</h2>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id accumsan augue. Phasellus consequat augue vitae tellus tincidunt posuere. Curabitur justo urna, consectetur vel elit iaculis, ultrices condimentum risus. Nulla facilisi. Etiam venenatis molestie tellus. Quisque consectetur non risus eu rutrum.</p>
+                
+            </dialog>
+
         </figure>
 
     </main>
@@ -151,5 +155,24 @@
 
     </footer>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+        
+            const modal = document.querySelector('dialog');
+            const open = document.getElementById('open-modal');
+            
+        open.addEventListener('click', () => {
+            modal.showModal();
+        });
+        
+        modal.addEventListener('click', event => {
+            if (event.target === modal) {
+                modal.close('cancelled');
+            }
+        });
+        
+        });
+    </script>
+            
 </body>
 </html>

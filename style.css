@@ -51,22 +51,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    border-bottom: 1px solid var(--color-skyblue-light);
     font-family: var(--font-secondary);
     font-size: var(--size-six-up);
     letter-spacing: .1em;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
 }
 
 h2 {
-    border-top: 1px dashed var(--color-skyblue);
     font-size: var(--size-four-up);
-    padding-top: 2rem;
+    margin-top: 1rem;
 }
 
 h3 {
     color: var(--color-coral);
     font-size: var(--size-three-up);
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 h4 {
@@ -134,7 +134,7 @@ p {
 }
 
 .paragraph-tertiary {
-    border-radius: 1rem;
+    border-radius: .4rem;
     font-size: var(--size-one-down);
 }
 
@@ -158,7 +158,7 @@ nav a:visited {
 }
 
 
-@media ( min-width: 800px ) {
+@media ( min-width: 600px ) {
 
     nav a {
         display: inline-block;
@@ -198,17 +198,8 @@ Examples
 }
 
 .example-heading-sizes h1 {
-    font-family: var(--font-primary);
-    margin: 0;
-}
-
-.example-heading-sizes h2 {
     border: none;
-    padding: 0;
-}
-
-.example-heading-sizes h3 {
-    padding: 0;
+    font-family: var(--font-primary);
 }
 
 .example-color-light-sky-blue {
@@ -249,7 +240,7 @@ Examples
 }
 
 .example-colors div {
-    border-radius: 1rem 0 1rem 0;
+    border-radius: .4rem 0 .4rem 0;
     color: var(--color-sand);
     margin: 1rem;
     max-width: 100%;
@@ -384,6 +375,7 @@ Button Component
     color: white;
     text-shadow: none;
 }
+
 /*=================================================
 Accordion Component
 =================================================*/
@@ -392,6 +384,7 @@ summary {
     background-color: var(--color-coral);
     box-shadow: 2px 1px 3px rgba(0,0,0,.2);
     color: var(--color-sand);
+    cursor: pointer;
     font-size: var(--size-two-up);
     padding: .5rem;
 }
@@ -417,6 +410,7 @@ details {
     border: 2px solid var(--color-coral);
     border-radius: .4rem;
     margin: 1rem;
+    overflow: hidden;
 }
 
 details div {
@@ -490,6 +484,20 @@ header li {
     padding: 0;
 }
 
+@media ( min-width: 900px) {
+    
+    header {
+        align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    header ul {
+        margin: 0;
+    }
+}
+
 /*=================================================
 Footer Component
 =================================================*/
@@ -503,6 +511,10 @@ footer {
 footer ul {
     list-style: none;
     padding: 0;
+}
+
+footer li {
+    border: none;
 }
 
 footer a {
@@ -532,15 +544,12 @@ Figure Component
 =================================================*/
 
 figure {
-    border-radius: 1rem;
+    border-radius: .4rem;
     box-shadow: 0 1px 3px rgba(58,77,95,.4);
     margin: 1rem 0 1.5rem;
     padding: 1rem;
 }
 
-.figure-svg {
-    box-shadow: none;
-}
 
 /*=================================================
 blockquote Component
@@ -563,9 +572,100 @@ blockquote p {
     box-shadow: none;
 }
 
-  cite {
+cite {
     font-size: var(--size-one-up);
+}
+
+/*=================================================
+Modal Component
+=================================================*/
+
+dialog {
+    background-color: var(--color-sand);
+	border: none;
+	border-radius: .4rem;
+    box-shadow: 8px 8px 0 var(--color-skyblue-light);
+    color: var(--color-coral);
+    max-width: 24rem;
+	padding: 2rem;
+}
+
+dialog[open] {
+    animation: slide-down .6s ease-in-out;
+}
+
+dialog h2 {
+    border-bottom: 2px solid var(--color-skyblue);
+}
+
+dialog p {
+    color: var(--color-sand-dark);
+}
+
+button {
+    background-color: var(--color-skyblue);
+    border: 2px solid var(--color-skyblue);
+    border-radius: .4rem;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: var(--size-two-up);
+    padding: .5rem 1rem;
+}
+
+button:visited {
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--color-skyblue);
+}
+
+button:active {
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    outline: none;
+}
+
+dialog::backdrop {
+    animation: bg-rotate 4s ease-in-out;
+    background-color: rgba(0,0,0, 0);
+    background-image: url(images/modal-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@keyframes bg-rotate {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+
+    0% {
+        opacity: 0;
+        transform: translatey(-40rem);
+    }
+
+    75% {
+        opacity: 1;
+    }
+    85% {
+        transform: translateY(4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
   }
+
 
 /*=================================================
 List Component
@@ -608,15 +708,7 @@ section {
     padding: .5rem;
 }
 
-svg {
-    border-radius: 2rem;
-    box-shadow: 0 1px 3px rgba(58,77,95,.4);
-    display: block;
-    margin-bottom: 2rem;
-    max-width: 300px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
+
 
 
 

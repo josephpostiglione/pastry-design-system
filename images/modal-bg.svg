@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>modal-bg</title>
+    <desc>Created with Sketch.</desc>
+    <g id="modal-bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#9DD7F4" transform="translate(1192.000000, 139.000000) rotate(15.000000) translate(-1192.000000, -139.000000) " x="1098" y="45" width="188" height="188"></rect>
+        <circle id="Oval" fill="#FFD6DA" cx="140" cy="750" r="82"></circle>
+        <polygon id="Triangle" fill="#BDE9FF" transform="translate(1019.000000, 897.000000) rotate(-30.000000) translate(-1019.000000, -897.000000) " points="1019 815 1101 979 937 979"></polygon>
+        <polygon id="Polygon" fill="#F7B6BD" transform="translate(369.000000, 117.000000) rotate(60.000000) translate(-369.000000, -117.000000) " points="369 57 426.063391 98.4589803 404.267115 165.54102 333.732885 165.54102 311.936609 98.4589803"></polygon>
+        <rect id="Rectangle" stroke="#FFF8F0" stroke-width="2" transform="translate(1153.000000, 455.000000) rotate(30.000000) translate(-1153.000000, -455.000000) " x="1143" y="421" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle" stroke="#FFF8F0" stroke-width="2" transform="translate(313.000000, 289.000000) rotate(30.000000) translate(-313.000000, -289.000000) " x="303" y="255" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy" stroke="#FFF8F0" stroke-width="2" transform="translate(558.000000, 233.000000) rotate(30.000000) translate(-558.000000, -233.000000) " x="548" y="199" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-2" stroke="#FFF8F0" stroke-width="2" transform="translate(633.000000, 668.000000) rotate(30.000000) translate(-633.000000, -668.000000) " x="623" y="634" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-3" stroke="#FFF8F0" stroke-width="2" transform="translate(1051.000000, 750.000000) rotate(30.000000) translate(-1051.000000, -750.000000) " x="1041" y="716" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-4" stroke="#FFF8F0" stroke-width="2" transform="translate(1119.000000, 199.000000) rotate(30.000000) translate(-1119.000000, -199.000000) " x="1109" y="165" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-12" stroke="#9DD7F4" stroke-width="2" transform="translate(1296.000000, 313.000000) rotate(30.000000) translate(-1296.000000, -313.000000) " x="1286" y="279" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-13" stroke="#9DD7F4" stroke-width="2" transform="translate(377.000000, 59.000000) rotate(30.000000) translate(-377.000000, -59.000000) " x="367" y="25" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-14" stroke="#9DD7F4" stroke-width="2" transform="translate(99.000000, 199.000000) rotate(30.000000) translate(-99.000000, -199.000000) " x="89" y="165" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-15" stroke="#9DD7F4" stroke-width="2" transform="translate(347.000000, 431.000000) rotate(30.000000) translate(-347.000000, -431.000000) " x="337" y="397" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-16" stroke="#9DD7F4" stroke-width="2" transform="translate(48.000000, 396.000000) scale(-1, 1) rotate(30.000000) translate(-48.000000, -396.000000) " x="38" y="362" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-17" stroke="#9DD7F4" stroke-width="2" transform="translate(834.000000, 69.000000) scale(-1, 1) rotate(30.000000) translate(-834.000000, -69.000000) " x="824" y="35" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-18" stroke="#9DD7F4" stroke-width="2" transform="translate(1011.000000, 430.000000) scale(-1, 1) rotate(30.000000) translate(-1011.000000, -430.000000) " x="1001" y="396" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-19" stroke="#9DD7F4" stroke-width="2" transform="translate(1296.000000, 546.000000) scale(-1, 1) rotate(30.000000) translate(-1296.000000, -546.000000) " x="1286" y="512" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-20" stroke="#FFD6DA" stroke-width="2" transform="translate(313.000000, 244.000000) scale(-1, 1) rotate(30.000000) translate(-313.000000, -244.000000) " x="303" y="210" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-21" stroke="#FFD6DA" stroke-width="2" transform="translate(941.000000, 164.000000) rotate(30.000000) translate(-941.000000, -164.000000) " x="931" y="130" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-23" stroke="#FFD6DA" stroke-width="2" transform="translate(200.000000, 512.000000) rotate(30.000000) translate(-200.000000, -512.000000) " x="190" y="478" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-22" stroke="#FFD6DA" stroke-width="2" transform="translate(1279.000000, 580.000000) rotate(30.000000) translate(-1279.000000, -580.000000) " x="1269" y="546" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-24" stroke="#FFD6DA" stroke-width="2" transform="translate(1373.000000, 302.000000) scale(-1, 1) rotate(30.000000) translate(-1373.000000, -302.000000) " x="1363" y="268" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-25" stroke="#FFD6DA" stroke-width="2" transform="translate(1356.000000, 79.000000) scale(-1, -1) rotate(30.000000) translate(-1356.000000, -79.000000) " x="1346" y="45" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-5" stroke="#FFF8F0" stroke-width="2" transform="translate(183.000000, 809.000000) rotate(30.000000) translate(-183.000000, -809.000000) " x="173" y="775" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-6" stroke="#FFF8F0" stroke-width="2" transform="translate(425.000000, 897.000000) scale(-1, 1) rotate(30.000000) translate(-425.000000, -897.000000) " x="415" y="863" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-7" stroke="#FFF8F0" stroke-width="2" transform="translate(667.000000, 634.000000) scale(-1, 1) rotate(30.000000) translate(-667.000000, -634.000000) " x="657" y="600" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-8" stroke="#FFF8F0" stroke-width="2" transform="translate(217.000000, 189.000000) scale(-1, 1) rotate(30.000000) translate(-217.000000, -189.000000) " x="207" y="155" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-9" stroke="#FFF8F0" stroke-width="2" transform="translate(808.000000, 93.000000) scale(-1, 1) rotate(30.000000) translate(-808.000000, -93.000000) " x="798" y="59" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-10" stroke="#FFF8F0" stroke-width="2" transform="translate(1347.000000, 868.000000) scale(-1, 1) rotate(30.000000) translate(-1347.000000, -868.000000) " x="1337" y="834" width="20" height="68" rx="10"></rect>
+        <rect id="Rectangle-Copy-11" stroke="#FFF8F0" stroke-width="2" transform="translate(1093.000000, 956.000000) scale(-1, 1) rotate(30.000000) translate(-1093.000000, -956.000000) " x="1083" y="922" width="20" height="68" rx="10"></rect>
+    </g>
+</svg>
