@@ -442,6 +442,34 @@ details div p {
     color: var(--color-coral);
 }
 
+.summary-tertiary {
+    background-color: white;
+    color: var(--color-sand-dark);
+}
+
+.details-tertiary {
+    border: 2px solid var(--color-sand-dark);
+}
+
+.details-tertiary p {
+    border-bottom: 1px solid var(--color-sand-dark);
+    color: var(--color-sand-dark);
+}
+
+.summary-tertiary::-webkit-details-marker {
+    background: url(images/arrow-right-sand-dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+}
+
+.details-tertiary[open] summary::-webkit-details-marker  {
+    background: url(images/arrow-down-sand-dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 /*=================================================
 Header Component
 =================================================*/
