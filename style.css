@@ -18,7 +18,6 @@ html {
     --color-disabled-grey: #E6DFD8;
 }
 
-
 /*=================================================
 Typography
 =================================================*/
@@ -85,12 +84,13 @@ h6 {
 
 main h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: var(--color-coral-light);
-    text-shadow: 2px 2px 1px var(--color-coral);
+    text-shadow: 2px 2px 1px var(--color-skyblue-light);
 }
 
 a {
     color: var(--color-coral);
     text-decoration: none;
+    transition: all .3s ease-in-out;
 }
 
 a:visited {
@@ -98,16 +98,12 @@ a:visited {
 }
 
 a:hover {
-    text-shadow: 2px 2px 1px var(--color-skyblue);
+    text-shadow: 2px 2px 1px var(--color-skyblue-light);
+    transition: all .1s ease-in-out;
 }
 
 a:focus {
-    font-weight: bold;
     outline-color: var(--color-skyblue);
-}
-
-a:active {
-    font-weight: bold;
 }
 
 p {
@@ -143,6 +139,17 @@ p {
     html {
         --size-ratio: 1.333;  /*==Major Second for mobile, Perfect Fourth for desktop==*/
      } 
+}
+
+@keyframes blink {
+
+    0% {     
+        opacity: 0;  
+    }
+    
+    100% {   
+        opacity: 1;   
+    }
 }
 
 /*=================================================
@@ -266,21 +273,23 @@ Button Component
 =================================================*/
 
 .link-button {
+    background-color: var(--color-coral);
     border: 2px solid var(--color-coral);
     border-radius: .4rem;
-    color: var(--color-coral);
+    color: var(--color-sand);
     display: inline-block;
     margin: 1rem;
     padding: .5rem 1rem;
 }
 
 .link-button:visited {
-    color: var(--color-coral);
+    color: white;
 }
 
 .link-button:hover {
-    background-color: var(--color-coral);
-    color: var(--color-sand);
+    background-color: white;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    color: var(--color-coral);
     text-shadow: none;
 }
 
@@ -289,23 +298,26 @@ Button Component
 }
 
 .link-button:active {
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    box-shadow: none;
     font-weight: normal;
 }
 
 .link-button-hero {
     background-color: var(--color-coral);
     box-shadow: none;
+    color: white;
     font-size: var(--size-one-up);
     padding: .75rem 2rem;
 }
 
 .link-button-hero:visited {
-    color: var(--color-sand);
+    color: white;
 }
 
 .link-button-hero:hover {
     box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+    color: var(--color-coral);
+
 }
 
 .link-button-hero:active {
@@ -321,20 +333,26 @@ Button Component
     background-color: var(--color-skyblue);
 }
 
-.link-button-secondary {
-    border: 2px solid var(--color-skyblue-light);
-    box-shadow: none;
+.link-button-hero-secondary:hover {
+    background-color: white;
     color: var(--color-skyblue);
+}
+
+.link-button-secondary {
+    background-color: var(--color-skyblue);
+    border: 2px solid var(--color-skyblue);
+    box-shadow: none;
+    color: white;
 }
 
 .link-button-secondary:visited {
-    color: var(--color-skyblue);
+    color: white;
 }
 
 .link-button-secondary:hover {
-    background-color: var(--color-skyblue);
+    background-color: white;
     border: 2px solid var(--color-skyblue);
-    color: var(--color-sand);
+    color: var(--color-skyblue);
 }
 
 .link-button-secondary:focus {
@@ -368,6 +386,7 @@ Button Component
 
 .link-button-tertiary:visited {
     color: var(--color-sand-dark);
+    font-weight: normal;
 }
 
 .link-button-tertiary:hover {
@@ -382,10 +401,9 @@ Accordion Component
 
 summary {
     background-color: var(--color-coral);
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
     color: var(--color-sand);
     cursor: pointer;
-    font-size: var(--size-two-up);
+    font-size: var(--size-one-up);
     padding: .5rem;
 }
 
@@ -413,12 +431,30 @@ details {
     overflow: hidden;
 }
 
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+  
 details div {
     padding: .5rem 2rem;
 }
 
+details div a {
+    color: var(--color-skyblue);
+    text-decoration: underline;
+}
+
+details div a:visited {
+    color: var(--color-skyblue);
+}
+
+details div a:hover {
+    color: var(--color-coral);
+    text-shadow: none;
+}
+
 details div p {
-    border-bottom: 1px solid var(--color-coral);
+    border-top: 1px solid var(--color-coral);
     color: var(--color-skyblue);
     padding: 1rem 0;
 }
@@ -431,8 +467,20 @@ details div p {
     border: 2px solid var(--color-skyblue);
 }
 
+.details-secondary a {
+    color: var(--color-coral);
+}
+
+.details-secondary a:visited {
+    color: var(--color-coral);
+}
+
+.details-secondary a:hover {
+    color: var(--color-skyblue);
+}
+
 .details-secondary p {
-    border-bottom: 1px solid var(--color-skyblue);
+    border-top: 1px solid var(--color-skyblue);
     color: var(--color-coral);
 }
 
@@ -445,8 +493,20 @@ details div p {
     border: 2px solid var(--color-sand-dark);
 }
 
+.details-tertiary a {
+    color: var(--color-sand-dark);
+}
+
+.details-tertiary a:visited {
+    color: var(--color-sand-dark); 
+}
+
+.details-tertiary a:hover {
+    opacity: .5;
+}
+
 .details-tertiary p {
-    border-bottom: 1px solid var(--color-sand-dark);
+    border-top: 1px solid var(--color-sand-dark);
     color: var(--color-sand-dark);
 }
 
@@ -463,6 +523,15 @@ details div p {
     background-size: contain;
 }
 
+@keyframes sweep {
+
+    0% {
+        opacity: 0; margin-left: -10px
+    }
+    100% {
+        opacity: 1; margin-left: 0px
+    }
+}
 
 /*=================================================
 Header Component
@@ -508,6 +577,10 @@ footer {
     padding: 2rem;
 }
 
+footer p {
+    color: var(--color-sand);
+}
+
 footer ul {
     list-style: none;
     padding: 0;
@@ -523,12 +596,12 @@ footer a {
 }
 
 footer a:visited {
-    color: var(--color-skyblue-dark);
+    color: var(--color-sand);
 }
 
 footer a:hover {
-    font-weight: bold;
-    text-shadow: 2px 2px 1px var(--color-coral-light);
+
+    text-shadow: 2px 2px 3px var(--color-skyblue);
 }
 
 footer a:focus {
@@ -606,12 +679,12 @@ button {
     background-color: var(--color-skyblue);
     border: 2px solid var(--color-skyblue);
     border-radius: .4rem;
-    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
     color: white;
     cursor: pointer;
     font-family: var(--font-primary);
-    font-size: var(--size-two-up);
-    padding: .5rem 1rem;
+    font-size: var(--size-one-up);
+    padding: .75rem 2rem;
+
 }
 
 button:visited {
@@ -619,7 +692,9 @@ button:visited {
 }
 
 button:hover {
+    animation: text-fade-in .3s ease-in-out;
     background-color: white;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
     color: var(--color-skyblue);
 }
 
@@ -666,7 +741,18 @@ dialog::backdrop {
     100% {
         transform: translateY(0);
     }
-  }
+}
+
+@keyframes text-fade-in {
+
+    0% {
+        color: white;
+    }
+   
+    100% {
+        color: var(--color-skyblue);
+    }
+}
 
 
 /*=================================================
