@@ -43,10 +43,10 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    letter-spacing: .08em;
     line-height: 1.2;
     margin: 0;
     padding: 0;
-    letter-spacing: .08em;
 }
 
 h1 {
@@ -90,7 +90,7 @@ main h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 a {
     color: var(--color-coral);
     text-decoration: none;
-    transition: all .3s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 a:visited {
@@ -136,20 +136,10 @@ p {
 
 
 @media ( min-width: 600px ) {
+
     html {
         --size-ratio: 1.333;  /*==Major Second for mobile, Perfect Fourth for desktop==*/
      } 
-}
-
-@keyframes blink {
-
-    0% {     
-        opacity: 0;  
-    }
-    
-    100% {   
-        opacity: 1;   
-    }
 }
 
 /*=================================================
@@ -178,6 +168,7 @@ nav a:visited {
         font-size: var(--size-two-up);
 	}
 }
+
 /*=================================================
 Examples
 =================================================*/
@@ -528,6 +519,7 @@ details div p {
     0% {
         opacity: 0; margin-left: -10px
     }
+
     100% {
         opacity: 1; margin-left: 0px
     }
@@ -600,7 +592,6 @@ footer a:visited {
 }
 
 footer a:hover {
-
     text-shadow: 2px 2px 3px var(--color-skyblue);
 }
 
@@ -664,7 +655,7 @@ dialog {
 }
 
 dialog[open] {
-    animation: slide-down .6s ease-in-out;
+    animation: slide-down .7s ease-in-out;
 }
 
 dialog h2 {
@@ -704,8 +695,8 @@ button:active {
 }
 
 dialog::backdrop {
-    animation: bg-rotate 4s ease-in-out;
-    background-attachment: fixed;
+    animation: bg-fade-in 4s ease-in-out;
+
     background-color: rgba(0,0,0, 0);
     background-image: url(images/modal-bg.svg);
     background-position: center;
@@ -713,7 +704,7 @@ dialog::backdrop {
     background-size: cover;
 }
 
-@keyframes bg-rotate {
+@keyframes bg-fade-in {
 
     0% {
         opacity: 0;
@@ -733,8 +724,6 @@ dialog::backdrop {
 
     75% {
         opacity: 1;
-    }
-    85% {
         transform: translateY(4rem);
     }
 
