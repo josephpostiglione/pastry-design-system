@@ -743,7 +743,6 @@ dialog::backdrop {
     }
 }
 
-
 /*=================================================
 List Component
 =================================================*/
@@ -783,6 +782,31 @@ main {
 section {
     margin-bottom: 2rem;
     padding: .5rem;
+}
+
+/*=================================================
+Jokes component 
+=================================================*/
+
+.main-dwight {
+    max-width: 80rem;
+}
+
+.main-dwight blockquote {
+    margin: 1rem auto;
+}
+
+.main-dwight blockquote p {
+    font-size: var(--size-one-up);
+}
+
+.img-dwight {
+    border: 1px solid var(--color-skyblue);
+    border-radius: 1rem;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    float: left;
+    margin: 2rem 2rem 2rem 1rem;
+    max-width: 16rem;
 }
 
 
