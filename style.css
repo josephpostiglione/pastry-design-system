@@ -776,7 +776,6 @@ input, textarea, select {
     min-width: 50%;
     max-width: 100%;
     padding: .5rem;
-    text-transform: lowercase; 
     transition: all .3s ease-in-out;
 	-webkit-appearance: none;
 }
