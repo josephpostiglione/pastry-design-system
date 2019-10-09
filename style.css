@@ -16,6 +16,11 @@ html {
     --color-sand:#FFF8F0;
     --color-sand-dark: #403E3C;
     --color-disabled-grey: #E6DFD8;
+
+    --shadow-hover: 2px 1px 3px rgba(0,0,0,.4);
+    --shadow-active: 2px 1px 3px rgba(0,0,0,.2);
+    --shadow-solid: 2px 2px 0 var(--color-sand-dark);
+    --shadow-blockquote: 8px 8px 0 var(--color-skyblue-light);
 }
 
 /*=================================================
@@ -114,7 +119,7 @@ p {
     color: var(--color-sand);
     font-family: var(--font-secondary);
     font-size: var(--size-four-up);
-    text-shadow: 2px 2px 1px var(--color-coral-dark);
+    text-shadow: 1px 1px 0 var(--color-coral-light), 2px 2px 0 var(--color-coral-dark);
 }
 
 .site-logo:visited {
@@ -146,6 +151,10 @@ p {
 Navigation Component
 =================================================*/
 
+nav {
+    text-transform: lowercase;
+}
+
 nav a {
     color: var(--color-sand);
 }
@@ -161,6 +170,7 @@ nav a:visited {
         display: inline-block;
         padding-right: 1rem;
         text-align: right;
+        text-shadow: 1px 1px 0 var(--color-coral-light), 2px 2px 0 var(--color-coral-dark);
 	}
 	
 	nav li {
@@ -279,7 +289,7 @@ Button Component
 
 .link-button:hover {
     background-color: white;
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    box-shadow: var(--shadow-hover);
     color: var(--color-coral);
     text-shadow: none;
 }
@@ -289,7 +299,7 @@ Button Component
 }
 
 .link-button:active {
-    box-shadow: none;
+    box-shadow: var(--shadow-active);
     font-weight: normal;
 }
 
@@ -306,13 +316,13 @@ Button Component
 }
 
 .link-button-hero:hover {
-    box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+    box-shadow: var(--shadow-hover);
     color: var(--color-coral);
 
 }
 
 .link-button-hero:active {
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    box-shadow: var(--shadow-active);
 }
 
 .link-button-hero-secondary {
@@ -382,8 +392,13 @@ Button Component
 
 .link-button-tertiary:hover {
     background-color: var(--color-sand-dark);
+    box-shadow: var(--shadow-hover);
     color: white;
     text-shadow: none;
+}
+
+.link-button-tertiary:active {
+    box-shadow: var(--shadow-active);
 }
 
 /*=================================================
@@ -621,15 +636,16 @@ blockquote Component
 
 blockquote {
     background-color: var(--color-sand);
-    box-shadow: 8px 8px 0 var(--color-skyblue-light);
+    border-radius: .4rem;
+    box-shadow: var(--shadow-blockquote);
     color: var(--color-coral);
     font-family: var(--font-primary);
     font-size: var(--size-two-up);
     font-style: italic;
     line-height:1.6;
     margin: 3rem 0;
-    padding: 1rem 2rem 1rem 4rem;
-    width: 70%;
+    padding: 1rem 2rem 1rem 3rem;
+    max-width: 70%;
   }
 
 blockquote p {
@@ -648,7 +664,7 @@ dialog {
     background-color: var(--color-sand);
 	border: none;
 	border-radius: .4rem;
-    box-shadow: 8px 8px 0 var(--color-skyblue-light);
+    box-shadow: var(--shadow-blockquote);
     color: var(--color-coral);
     max-width: 18rem;
 	padding: 2rem;
@@ -685,7 +701,7 @@ button:visited {
 button:hover {
     animation: text-fade-in .3s ease-in-out;
     background-color: white;
-    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    box-shadow: var(--shadow-hover);
     color: var(--color-skyblue);
 }
 
@@ -694,7 +710,7 @@ button:focus {
 }
 
 button:active {
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    box-shadow: var(--shadow-active);
     outline: none;
 }
 
@@ -755,20 +771,23 @@ input, textarea, select {
     border-radius: .4rem;
     box-sizing: border-box;
     display: block;
-    font-size: var(--size-one-up);
+    font-size: 1rem;
 	margin: 0;
     min-width: 50%;
     max-width: 100%;
     padding: .5rem;
+    text-transform: lowercase; 
+    transition: all .3s ease-in-out;
 	-webkit-appearance: none;
 }
 
-input:focus, textarea:focus, select:focus {
+input:hover, textarea:hover, select:hover, input:focus, textarea:focus, select:focus {
+    box-shadow: var(--shadow-solid);
     outline: none;
-    box-shadow: 2px 2px 0 var(--color-sand-dark);
 }
 
-input[disabled], textarea[disabled],select[disabled] {
+input[disabled], textarea[disabled], select[disabled], input[disabled]:hover, textarea[disabled]:hover,select[disabled]:hover {
+    box-shadow: none;
     opacity: .5;
 }
 
@@ -792,7 +811,7 @@ select {
 }
 
 .form-microcopy {
-    color: var(--color-sand-dark);
+    color: var(--color-skyblue-dark);
     font-size: 1rem;
     opacity: .7;
 }
@@ -818,7 +837,7 @@ input[type="submit"], button[type="submit"] {
 input[type="submit"]:hover, button[type="submit"]:hover {
     animation: text-fade-in-coral .3s ease-in-out;
     background-color: white;
-    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    box-shadow: var(--shadow-hover);
     color: var(--color-coral);
 	cursor: pointer;
 }
@@ -829,7 +848,7 @@ input[type="submit"]:focus, button[type="submit"]:focus {
 }
 
 input[type="submit"]:active, button[type="submit"]:active {
-    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+    box-shadow: var(--shadow-active);
 
 }
 
@@ -890,11 +909,12 @@ Jokes component
 =================================================*/
 
 .main-dwight {
-    max-width: 80rem;
+    max-width: 80%;
 }
 
 .main-dwight blockquote {
     margin: 2rem auto;
+    padding: 2rem;
 }
 
 .main-dwight blockquote p {
@@ -904,7 +924,7 @@ Jokes component
 .img-dwight {
     border: 1px solid var(--color-skyblue);
     border-radius: 1rem;
-    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    box-shadow: var(--shadow-blockquote);
     float: left;
     margin: 2rem 2rem 2rem 1rem;
     max-width: 16rem;
