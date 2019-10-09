@@ -650,7 +650,7 @@ dialog {
 	border-radius: .4rem;
     box-shadow: 8px 8px 0 var(--color-skyblue-light);
     color: var(--color-coral);
-    max-width: 24rem;
+    max-width: 18rem;
 	padding: 2rem;
 }
 
@@ -674,8 +674,8 @@ button {
     cursor: pointer;
     font-family: var(--font-primary);
     font-size: var(--size-one-up);
+    margin: 1rem;
     padding: .75rem 2rem;
-
 }
 
 button:visited {
@@ -689,6 +689,10 @@ button:hover {
     color: var(--color-skyblue);
 }
 
+button:focus {
+    outline-color: var(--color-coral);
+}
+
 button:active {
     box-shadow: 2px 1px 3px rgba(0,0,0,.2);
     outline: none;
@@ -696,8 +700,7 @@ button:active {
 
 dialog::backdrop {
     animation: bg-fade-in 4s ease-in-out;
-
-    background-color: rgba(0,0,0, 0);
+    background-color: rgba(0,0,0,0.0);
     background-image: url(images/modal-bg.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -740,6 +743,104 @@ dialog::backdrop {
    
     100% {
         color: var(--color-skyblue);
+    }
+}
+
+/*=================================================
+form Components
+=================================================*/
+
+input, textarea, select {
+    border: 1px solid var(--color-skyblue-dark);
+    border-radius: .4rem;
+    box-sizing: border-box;
+    display: block;
+    font-size: var(--size-one-up);
+	margin: 0;
+    min-width: 50%;
+    max-width: 100%;
+    padding: .5rem;
+	-webkit-appearance: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 2px 2px 0 var(--color-sand-dark);
+}
+
+input[disabled], textarea[disabled],select[disabled] {
+    opacity: .5;
+}
+
+label {
+    color: var(--color-sand-dark);
+    display: block;
+    font-size: var(--size-one-up);
+    margin: 1rem 0 0;
+}
+
+textarea {
+	min-height: 5rem;
+}
+
+select {
+    background-color: white;
+}
+
+.form-error {
+    border: 1px solid red;
+}
+
+.form-microcopy {
+    color: var(--color-sand-dark);
+    font-size: 1rem;
+    opacity: .7;
+}
+
+.error-message {
+    color: red;
+    font-size: var(--size-one-down);
+    margin-top: .25rem;
+}
+
+input[type="submit"], button[type="submit"] {
+    background-color: var(--color-coral);
+    border: 2px solid var(--color-coral);
+    border-radius: .4rem;
+    color: var(--color-sand);
+    display: inline-block;
+    font-size: var(--size-one-up);
+    margin: 1rem;
+    min-width: inherit;
+    padding: .5rem 1rem;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+    animation: text-fade-in-coral .3s ease-in-out;
+    background-color: white;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.4);
+    color: var(--color-coral);
+	cursor: pointer;
+}
+
+input[type="submit"]:focus, button[type="submit"]:focus {
+    box-shadow: none;
+    outline-color: var(--color-skyblue);
+}
+
+input[type="submit"]:active, button[type="submit"]:active {
+    box-shadow: 2px 1px 3px rgba(0,0,0,.2);
+
+}
+
+@keyframes text-fade-in-coral {
+
+    0% {
+        color: white;
+    }
+   
+    100% {
+        color: var(--color-coral);
     }
 }
 
