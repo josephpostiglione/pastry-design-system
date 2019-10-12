@@ -270,7 +270,7 @@ Examples
 
 
 /*=================================================
-Button Component
+Link Button Component
 =================================================*/
 
 .link-button {
@@ -309,10 +309,6 @@ Button Component
     color: white;
     font-size: var(--size-one-up);
     padding: .75rem 2rem;
-}
-
-.link-button-hero:visited {
-    color: white;
 }
 
 .link-button-hero:hover {
@@ -465,12 +461,12 @@ details div p {
     padding: 1rem 0;
 }
 
-.summary-secondary {
-    background-color: var(--color-skyblue);
-}
-
 .details-secondary {
     border: 2px solid var(--color-skyblue);
+}
+
+.details-secondary summary {
+    background-color: var(--color-skyblue);
 }
 
 .details-secondary a {
@@ -532,11 +528,13 @@ details div p {
 @keyframes sweep {
 
     0% {
-        opacity: 0; margin-left: -10px
+        opacity: 0; 
+        transform: translatex(-10px);
     }
 
     100% {
-        opacity: 1; margin-left: 0px
+        opacity: 1; 
+        transform: translatex(0);
     }
 }
 
@@ -665,7 +663,7 @@ dialog {
 	border: none;
 	border-radius: .4rem;
     box-shadow: var(--shadow-blockquote);
-    color: var(--color-coral);
+    color: var(--color-sand-dark);
     max-width: 18rem;
 	padding: 2rem;
 }
@@ -676,22 +674,7 @@ dialog[open] {
 
 dialog h2 {
     border-bottom: 2px solid var(--color-skyblue);
-}
-
-dialog p {
-    color: var(--color-sand-dark);
-}
-
-button {
-    background-color: var(--color-skyblue);
-    border: 2px solid var(--color-skyblue);
-    border-radius: .4rem;
-    color: white;
-    cursor: pointer;
-    font-family: var(--font-primary);
-    font-size: var(--size-one-up);
-    margin: 1rem;
-    padding: .75rem 2rem;
+    color: var(--color-coral);
 }
 
 button:visited {
@@ -788,6 +771,18 @@ input:hover, textarea:hover, select:hover, input:focus, textarea:focus, select:f
 input[disabled], textarea[disabled], select[disabled], input[disabled]:hover, textarea[disabled]:hover,select[disabled]:hover {
     box-shadow: none;
     opacity: .5;
+}
+
+button {
+    background-color: var(--color-skyblue);
+    border: 2px solid var(--color-skyblue);
+    border-radius: .4rem;
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: var(--size-one-up);
+    margin: 1rem;
+    padding: .75rem 2rem;
 }
 
 label {

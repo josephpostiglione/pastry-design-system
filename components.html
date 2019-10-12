@@ -29,214 +29,210 @@
 
     <main>
 
-        <article>
+        <h1>Pastry Design Components</h1>
 
-            <h1>Pastry Design Components</h1>
+        <section>
 
-            <section>
+            <h2>Link Buttons</h2>
 
-                <h2>Link Buttons</h2>
+            <h3>Primary</h3>
 
-                <h3>Primary</h3>
+            <figure>
+
+                <a href="" class="link-button link-button-hero">primary</a>
+
+                <a href="" class="link-button link-button-hero link-button-hero-secondary">secondary</a>
+
+                <a href="" class="link-button link-button-hero link-button-disabled">disabled</a>
+
+            </figure>
+
+            <h3>Default</h3>
+
+            <figure>
+
+                <a href="" class="link-button">primary</a>
+
+                <a href="" class="link-button link-button-secondary">secondary</a>
+            
+                <a href="" class="link-button link-button-disabled">disabled</a>
+
+            </figure>
+
+            <h3>Tertiary</h3>
+
+            <figure>
+
+                    <a href="" class="link-button-tertiary">button</a>
+            
+            </figure>
+
+        </section>
+
+        <section>
+
+            <h2>Accordions</h2>
+
+            <figure>
+
+                <details>
+            
+                    <summary>primary</summary>
+                    
+                    <div>
+                    
+                        <p>Example 1</p>
+                
+                        <p><a href="">Example 2</a></p>
+
+                        <p>Example 3</p>
+                        
+                    </div>
+                    
+                </details>
+                
+                <details class="details-secondary">
+            
+                    <summary>secondary</summary>
+                    
+                    <div>
+                    
+                        <p>Example 1</p>
+                
+                        <p><a href="">Example 2</a></p>
+
+                        <p>Example 3</p>
+                        
+                    </div>
+                    
+                </details>
+                
+                <details class="details-tertiary">
+            
+                    <summary class="summary-tertiary">tertiary</summary>
+                    
+                    <div>
+                    
+                        <p>Example 1</p>
+                
+                        <p><a href="">Example 2</a></p>
+
+                        <p>Example 3</p>
+                        
+                    </div>
+                    
+                </details>
+                
+            </figure>
+
+        </section>
+
+        <section>
+
+            <h2>Modal Dialog</h2>
+
+            <figure>
+
+                <button id="open-modal" type="button">open modal</button>
+
+                <dialog id="modal-demo">
+                    
+                    <p class="paragraph-tertiary">Optional label</p>
+
+                    <h2>Modal Heading</h2>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id accumsan augue. Phasellus consequat augue vitae tellus tincidunt posuere. Curabitur justo urna, consectetur vel elit iaculis, ultrices condimentum risus.</p>
+                    
+                </dialog>
+
+            </figure>
+            
+        </section>
+
+        <section>
+
+            <h2>Form Inputs</h2>
+
+            <form action="">
+
+                <h3>Text Input</h3>
 
                 <figure>
 
-                    <a href="" class="link-button link-button-hero">primary</a>
+                    <label for="text">Label</label>
+                    <small class="form-microcopy">microcopy</small>
+                    <input type="text" id="text" name="text" placeholder="write something...">
 
-                    <a href="" class="link-button link-button-hero link-button-hero-secondary">secondary</a>
+                    <label for="text">Label</label>
+                    <small class="form-microcopy">microcopy</small>
+                    <input type="text" id="text" name="text" placeholder="write something..." class="form-error">
+                    <p class="error-message">Danger Danger Will Robinson!</p>
 
-                    <a href="" class="link-button link-button-hero link-button-disabled">disabled</a>
-
+                    <label for="text">Label</label>
+                    <small class="form-microcopy">microcopy</small>
+                    <input type="text" id="text" name="text" placeholder="write something..." disabled>
+                    
                 </figure>
 
-                <h3>Default</h3>
+                <h3>Text Area Input</h3>
 
                 <figure>
 
-                    <a href="" class="link-button">primary</a>
+                    <label for="textarea">Label</label>
+                    <textarea id="textarea" name="textarea" placeholder="fill me up!"></textarea>
 
-                    <a href="" class="link-button link-button-secondary">secondary</a>
+                    <label for="textarea">Label</label>
+                    <textarea id="textarea" name="textarea" placeholder="fill me up!" class="form-error"></textarea>
+                    <p class="error-message">Watch Out, Radioactive Man!</p>
+
+                    <label for="textarea">Label</label>
+                    <textarea id="textarea" name="textarea" placeholder="fill me up!" disabled></textarea>
                 
-                    <a href="" class="link-button link-button-disabled">disabled</a>
-
                 </figure>
-
-                <h3>Tertiary</h3>
+                
+                <h3>Select Input</h3>
 
                 <figure>
 
-                        <a href="" class="link-button-tertiary">button</a>
-                
-                </figure>
+                    <label for="select">Label</label>
+                    <select id="select" name="select">
+                        <option value="" selected disabled hidden>choose one...</option>
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                    </select>
 
-            </section>
+                    <label for="select">Label</label>
+                    <select id="select" name="select" class="form-error">
+                        <option value="" selected disabled hidden>choose one...</option>
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                    </select>
+                    <p class="error-message">You forgot to pick one!</p>
 
-            <section>
-
-                <h2>Accordions</h2>
-
-                <figure>
-
-                    <details>
-                
-                        <summary>primary</summary>
-                        
-                        <div>
-                        
-                            <p>Example 1</p>
-                    
-                            <p><a href="">Example 2</a></p>
-
-                            <p>Example 3</p>
-                            
-                        </div>
-                        
-                    </details>
-                    
-                    <details class="details-secondary">
-                
-                        <summary class="summary-secondary">secondary</summary>
-                        
-                        <div>
-                        
-                            <p>Example 1</p>
-                    
-                            <p><a href="">Example 2</a></p>
-
-                            <p>Example 3</p>
-                            
-                        </div>
-                        
-                    </details>
-                    
-                    <details class="details-tertiary">
-                
-                        <summary class="summary-tertiary">tertiary</summary>
-                        
-                        <div>
-                        
-                            <p>Example 1</p>
-                    
-                            <p><a href="">Example 2</a></p>
-
-                            <p>Example 3</p>
-                            
-                        </div>
-                        
-                    </details>
-                    
-                </figure>
-
-            </section>
-
-            <section>
-
-                <h2>Modal Dialog</h2>
-
-                <figure>
-
-                    <button id="open-modal" type="button">open modal</button>
-
-                    <dialog id="modal-demo">
-                        
-                        <p class="paragraph-tertiary">Optional label</p>
-
-                        <h2>Modal Heading</h2>
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id accumsan augue. Phasellus consequat augue vitae tellus tincidunt posuere. Curabitur justo urna, consectetur vel elit iaculis, ultrices condimentum risus.</p>
-                        
-                    </dialog>
+                    <label for="select">Label</label>
+                    <select id="select" name="select" disabled>
+                        <option value="" selected disabled hidden>choose one...</option>
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                    </select>
 
                 </figure>
-                
-            </section>
 
-            <section>
+            </form>
 
-                <h2>Form Inputs</h2>
+            <h2>Submit / Button</h2>
 
-                <form action="">
+            <figure>
 
-                    <h3>Text Input</h3>
+                <input type="submit" value="Submit">
+                <!--<button type="submit">Submit</button>-->
 
-                    <figure>
-
-                        <label for="text">Label</label>
-                        <small class="form-microcopy">microcopy</small>
-                        <input type="text" id="text" name="text" placeholder="write something...">
-
-                        <label for="text">Label</label>
-                        <small class="form-microcopy">microcopy</small>
-                        <input type="text" id="text" name="text" placeholder="write something..." class="form-error">
-                        <p class="error-message">Danger Danger Will Robinson!</p>
-
-                        <label for="text">Label</label>
-                        <small class="form-microcopy">microcopy</small>
-                        <input type="text" id="text" name="text" placeholder="write something..." disabled>
-                        
-                    </figure>
-
-                    <h3>Text Area Input</h3>
-
-                    <figure>
-
-                        <label for="textarea">Label</label>
-                        <textarea id="textarea" name="textarea" placeholder="fill me up!"></textarea>
-
-                        <label for="textarea">Label</label>
-                        <textarea id="textarea" name="textarea" placeholder="fill me up!" class="form-error"></textarea>
-                        <p class="error-message">Watch Out, Radioactive Man!</p>
-
-                        <label for="textarea">Label</label>
-                        <textarea id="textarea" name="textarea" placeholder="fill me up!" disabled></textarea>
-                    
-                    </figure>
-                    
-                    <h3>Select Input</h3>
-
-                    <figure>
-
-                        <label for="select">Label</label>
-                        <select id="select" name="select">
-                            <option value="" selected disabled hidden>choose one...</option>
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                        </select>
-
-                        <label for="select">Label</label>
-                        <select id="select" name="select" class="form-error">
-                            <option value="" selected disabled hidden>choose one...</option>
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                        </select>
-                        <p class="error-message">You forgot to pick one!</p>
-
-                        <label for="select">Label</label>
-                        <select id="select" name="select" disabled>
-                            <option value="" selected disabled hidden>choose one...</option>
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                        </select>
-
-                    </figure>
-
-                </form>
-
-                <h2>Submit / Button</h2>
-
-                <figure>
-
-                    <input type="submit" value="Submit">
-                    <!--<button type="submit">Submit</button>-->
-
-                </figure>
-                
-            </section>
-
-        </article>
+            </figure>
+            
+        </section>
 
     </main>
 
