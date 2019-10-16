@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Components - Pastry Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
@@ -14,18 +15,53 @@
 
         <a href="index.html" class="site-logo">Pastry Design</a>
 
-        <nav>
+        <nav class="site-nav">
 
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="style.html">Style</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li><a href="components.html" class="current-page">Components</a></li>
                 <li><a href="layouts.html">Layouts</a></li>
             </ul>
 
         </nav>
 
     </header>
+    
+    <nav class="nav-secondary side-nav">
+
+            <p class="nav-secondary-label">Components</p>
+
+            <ul>
+                <li><a href="#link-buttons">Link Buttons</a>
+                    <ul class="nav-secondary-nested">
+                        <li><a href="#link-buttons-primary">Primary</a></li>
+                        <li><a href="#link-buttons-default">Default</a></li>
+                        <li><a href="#link-buttons-tertiary">Tertiary</a></li>
+                    </ul>
+                </li>
+                <li><a href="#accordians">Accordions</a></li>
+                <li><a href="#modal-dialog">Modal Dialog</a></li>
+                <li><a href="#form-inputs">Form Inputs</a>
+                    <ul class="nav-secondary-nested">
+                        <li><a href="#form-inputs-text">Text</a></li>
+                        <li><a href="#form-inputs-text-area">Text Area</a></li>
+                        <li><a href="#form-inputs-select">Select</a></li>
+                        <li><a href="#form-inputs-search">Search</a></li>
+                        <li><a href="#form-inputs-range">Range</a></li>
+                    </ul>
+                </li>
+                <li><a href="#submit/button">Submit/Button</a></li>
+                <li><a href="#navigation">Navigation</a>
+                    <ul class="nav-secondary-nested">
+                        <li><a href="#navigation-primary">Primary</a></li>
+                        <li><a href="#navigation-secondary">Secondary</a></li>
+                        <li><a href="#navigation-footer">Footer</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
 
     <main>
 
@@ -33,9 +69,9 @@
 
         <section>
 
-            <h2>Link Buttons</h2>
+            <h2 id="link-buttons">Link Buttons</h2>
 
-            <h3>Primary</h3>
+            <h3 id="link-buttons-primary">Primary</h3>
 
             <figure>
 
@@ -47,7 +83,7 @@
 
             </figure>
 
-            <h3>Default</h3>
+            <h3 id="link-buttons-default">Default</h3>
 
             <figure>
 
@@ -59,7 +95,7 @@
 
             </figure>
 
-            <h3>Tertiary</h3>
+            <h3 id="link-buttons-tertiary">Tertiary</h3>
 
             <figure>
 
@@ -71,7 +107,7 @@
 
         <section>
 
-            <h2>Accordions</h2>
+            <h2 id="accordians">Accordions</h2>
 
             <figure>
 
@@ -129,7 +165,7 @@
 
         <section>
 
-            <h2>Modal Dialog</h2>
+            <h2 id="modal-dialog">Modal Dialog</h2>
 
             <figure>
 
@@ -151,11 +187,11 @@
 
         <section>
 
-            <h2>Form Inputs</h2>
+            <h2 id="form-inputs">Form Inputs</h2>
 
             <form action="">
 
-                <h3>Text Input</h3>
+                <h3 id="form-inputs-text">Text Input</h3>
 
                 <figure>
 
@@ -174,7 +210,7 @@
                     
                 </figure>
 
-                <h3>Text Area Input</h3>
+                <h3 id="form-inputs-text-area">Text Area Input</h3>
 
                 <figure>
 
@@ -190,7 +226,7 @@
                 
                 </figure>
                 
-                <h3>Select Input</h3>
+                <h3 id="form-inputs-select">Select Input</h3>
 
                 <figure>
 
@@ -221,22 +257,127 @@
 
                 </figure>
 
+                <h3 id="form-inputs-search">Search Input</h3>
+
+                <figure>
+                   
+                    <label for="search">Search</label>
+                    <small class="form-microcopy">what are you looking for?</small>
+
+                    <div class="search-container">
+                        <input type="search" id="search" placeholder="search..." name="search"/>
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    
+                </figure>
+
+                <h3 id="form-inputs-range">Range Input</h3>
+
+                <figure>
+
+                    <label for="range">Range</label>
+                    <input type="range" id="range" name="range"/>
+
+                </figure>
             </form>
 
-            <h2>Submit / Button</h2>
+            <h2 id="submit/button">Submit / Button</h2>
 
             <figure>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="submit">
                 <!--<button type="submit">Submit</button>-->
 
             </figure>
             
         </section>
 
+        <section>
+
+            <h2 id="navigation">Navigation</h2>
+
+
+            <h3 id="navigation-primary">Primary Navigation</h3>
+
+            <figure>
+
+                <header>
+
+                    <nav>
+
+                        <ul>
+                            <li><a href="javascript:;">one</a></li>
+                            <li><a href="javascript:;">two</a></li>
+                            <li><a href="javascript:;" class="current-page">three</a></li>
+                            <li><a href="javascript:;">four</a></li>
+                        </ul>
+            
+                    </nav>
+
+                </header>
+
+                <small>*in this example, three is the current page</small>
+            
+            </figure>
+
+                <h3 id="navigation-secondary">Secondary Navigation</h3>
+
+            <figure>
+
+                <nav class="nav-secondary">
+
+                    <p class="nav-secondary-label">Category</p>
+
+                    <ul>
+                        <li><a href="javascript:;">One</a></li>
+                        <li><a href="javascript:;">Two</a></li>
+                        <li><a href="javascript:;">Three</a>
+                            <ul class="nav-secondary-nested">
+                                <li><a href="javascript:;">Aye</a></li>
+                                <li><a href="javascript:;">Bee</a></li>
+                                <li><a href="javascript:;">Cee</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">Four</a></li>
+                    </ul>
+
+                </nav>
+
+            </figure>
+
+            <h3 id="navigation-footer">Footer Navigation</h3>
+
+            <figure>
+
+                <footer>
+
+                    <div>
+
+                    <p>Author</p>
+            
+                    <p>Author description</p>
+            
+                    <ul>
+                        <li><a href="javascript:;">Link</a></li>
+                        <li><a href="javascript:;">Link</a></li>
+                        <li><a href="javascript:;">Link</a></li>
+                    </ul>
+                    
+                    </div>
+
+                    <p>&copy; Copywrite</p>
+            
+                </footer>
+
+            </figure>
+
+        </section>
+
     </main>
 
     <footer>
+
+        <div>
 
         <p>Pastry Design by Joseph Postiglione</p>
 
@@ -248,7 +389,9 @@
             <li><a href="https://liftedtraces.bandcamp.com/">Music</a></li>
         </ul>
 
-        <p>&copy; Joseph Postiglione 2019</p>
+        </div>
+
+        <p class="footer-copywrite">&copy; Joseph Postiglione 2019</p>
 
     </footer>
     
