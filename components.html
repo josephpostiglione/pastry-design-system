@@ -34,7 +34,7 @@
 
         <ul>
             <li><a href="#link-buttons">Link Buttons</a>
-                <ul class="nav-secondary-nested">
+                <ul class="nav-secondary">
                     <li><a href="#link-buttons-primary">Primary</a></li>
                     <li><a href="#link-buttons-default">Default</a></li>
                     <li><a href="#link-buttons-tertiary">Tertiary</a></li>
@@ -43,7 +43,7 @@
             <li><a href="#accordians">Accordions</a></li>
             <li><a href="#modal-dialog">Modal Dialog</a></li>
             <li><a href="#form-inputs">Form Inputs</a>
-                <ul class="nav-secondary-nested">
+                <ul class="nav-secondary">
                     <li><a href="#form-inputs-text">Text</a></li>
                     <li><a href="#form-inputs-text-area">Text Area</a></li>
                     <li><a href="#form-inputs-select">Select</a></li>
@@ -53,12 +53,21 @@
             </li>
             <li><a href="#submit/button">Submit/Button</a></li>
             <li><a href="#navigation">Navigation</a>
-                <ul class="nav-secondary-nested">
+                <ul class="nav-secondary">
                     <li><a href="#navigation-primary">Primary</a></li>
                     <li><a href="#navigation-secondary">Secondary</a></li>
                     <li><a href="#navigation-footer">Footer</a></li>
                 </ul>
             </li>
+            <li><a href="#notification">Notifications</a>
+                <ul class="nav-secondary">
+                    <li><a href="#notification-error">Error</a></li>
+                    <li><a href="#notification-warning">Warning</a></li>
+                    <li><a href="#notification-neutral">Neutral</a></li>
+                    <li><a href="#notification-success">Success</a></li>
+                </ul>
+            </li>
+            <li><a href="#hero-block">Hero Block</a></li>
         </ul>
 
     </nav>
@@ -332,7 +341,7 @@
                         <li><a href="javascript:;">One</a></li>
                         <li><a href="javascript:;">Two</a></li>
                         <li><a href="javascript:;">Three</a>
-                            <ul class="nav-secondary-nested">
+                            <ul class="nav-secondary">
                                 <li><a href="javascript:;">Aye</a></li>
                                 <li><a href="javascript:;">Bee</a></li>
                                 <li><a href="javascript:;">Cee</a></li>
@@ -373,9 +382,98 @@
 
         </section>
 
+        <section>
+                
+            <h2 id="notification">Notifications</h2>
+
+            <h3 id="notification-error">Error</h3>
+
+            <figure>
+
+                <div class="notification notification-error">
+                    
+                    <img src="images/error-icon.svg">
+                    
+                    <div>
+                        <p>This is a notification that something went wrong...</p>
+                        <input type="submit" value="no thanks!" class="notification-button-deny">
+                        <input type="submit" value="help plz!" class="notification-button-confirm">
+                    </div>
+                </div>
+
+            </figure>
+
+            <h3 id="notification-warning">Warning</h3>
+
+            <figure>
+
+                <div class="notification notification-warning">
+                    
+                    <img src="images/warning-icon.svg">
+
+                    <div>
+                        <p>This is something we think you should know about!</p>
+                        <input type="submit" value="no thanks!" class="notification-button-deny">
+                        <input type="submit" value="yes plz!" class="notification-button-confirm">
+                    </div>
+                </div>
+
+            </figure>
+
+            <h3 id="notification-neutral">Neutral</h3>
+
+            <figure>
+
+                <div class="notification notification-neutral">
+                    
+                    <img src="images/neutral-icon.svg">
+
+                    <div>
+                        <p>This is something that happened...</p>
+                        <input type="submit" value="no thanks!" class="notification-button-deny">
+                        <input type="submit" value="yes plz!" class="notification-button-confirm">
+                    </div>
+                </div>
+
+            </figure>
+
+            <h3 id="notification-success">Success</h3>
+
+            <figure>
+
+                <div class="notification notification-success">
+                    
+                    <img src="images/success-icon.svg">
+
+                    <div>
+                        <p>This is something you did that is great!</p>
+                        <input type="submit" value="no thanks!" class="notification-button-deny">
+                        <input type="submit" value="yes plz!" class="notification-button-confirm">
+                    </div>
+                </div>
+
+            </figure>
+
+        </section>
+
+        <section>
+
+            <h2 id="hero-block">Hero Block</h2>
+
+            <figure>
+
+                <a href="hero-block.html">
+
+                    <img src="images/hero-bg-screenshot.png" alt="hero image of meringue pie" class="hero-screenshot">
+                </a>
+                
+            </figure>
+
+        </section>
+
     </main>
 
-    <footer>
+    <footer class="footer-side-nav">
 
         <div>
 

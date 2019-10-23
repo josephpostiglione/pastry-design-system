@@ -16,6 +16,9 @@ html {
     --color-sand:#FFF8F0;
     --color-sand-dark: #403E3C;
     --color-disabled-grey: #E6DFD8;
+    --color-error-red: #ff6347;
+    --color-warning-orange: #ffb147;
+    --color-success-green: #d6ffda;
 
     --shadow-hover: 2px 1px 3px rgba(0,0,0,.4);
     --shadow-active: 2px 1px 3px rgba(0,0,0,.2);
@@ -166,6 +169,13 @@ Header Component
 header {
     background-color: var(--color-coral);
     padding: 1rem 2rem .5rem;
+    transition: opacity .3s ease-in-out;
+    z-index: 2;
+}
+
+header:hover {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
 }
 
 header ul {
@@ -196,6 +206,7 @@ header li {
 
     header {
         left: 0;
+        opacity: .75;
         position: fixed;
         right: 0;
         z-index: 1;
@@ -270,19 +281,19 @@ nav a:hover {
     background-color: var(--color-coral);
 }
 
-.nav-secondary-nested {
+.nav-secondary ul ul {
     list-style: none;
 }
 
-.nav-secondary-nested a {
+.nav-secondary ul ul a {
     font-size: var(--size-one-down);
 }
 
-.nav-secondary-nested a:hover {
+.nav-secondary ul ul a:hover {
     background-color: var(--color-skyblue-light);
 }
 
-.nav-secondary-nested a:focus {
+.nav-secondary ul ul a:focus {
     background-color: var(--color-skyblue);
 }
 
@@ -293,24 +304,39 @@ nav a:hover {
     padding: 1rem 0 0 2rem;
 }
 
+.nav-secondary ul ul ul a:hover {
+    background-color: var(--color-sand);
+    color: var(--color-sand-dark);
+    text-shadow: none;
+}
+
+.nav-secondary ul ul ul a:focus {
+    background-color: var(--color-sand);
+}
+
 .side-nav {
     background-color: white;
-    border-radius: 0 0 .4rem 0;
-    box-shadow: var(--shadow-hover);
-    height: 633px;
+    border-right: 1px solid var(--color-coral-light);
+    bottom: 0;
     left: -200px;
+    margin-top: 5rem;
     opacity: .9;
     overflow-x: hidden;
     padding: 0;
     position: fixed;
-    top: 89.5px;
+    top: 0;
     transition: left .4s ease-in-out;
     width: 200px;
     z-index: 1;
 }
 
 .side-nav a:hover {
+    border-left: 2px solid var(--color-sand-dark);
     text-shadow: none;
+}
+
+.footer-side-nav {
+    transition: all .3s ease-in-out;
 }
 
 @media ( min-width: 600px ) {
@@ -353,6 +379,11 @@ nav a:hover {
     .side-nav {
         left: 0;
         transition: left .4s ease-in-out;
+    }
+
+    .footer-side-nav {
+        margin-left: 200px;
+        transition: all .3s ease-in-out;
     }
 
   
@@ -418,16 +449,6 @@ footer a:active {
         display: inline;
     }
 
-}
-/*
-@media ( min-width: 1240px ) {
-
-    footer {
-        left: 200px;
-        position: absolute;
-        right: 0;
-    }
-*/
 }
 
 /*=================================================
@@ -495,7 +516,18 @@ Examples
 
 .example-color-dark-sand {
     background-color: var(--color-sand-dark);
-    color: var(--color-sand-dark);
+}
+
+.example-color-error-red {
+    background-color: var(--color-error-red);
+}
+
+.example-color-warning-orange {
+    background-color: var(--color-warning-orange);
+}
+
+.example-color-success-green {
+    background-color: var(--color-success-green);
 }
 
 .example-colors div {
@@ -515,7 +547,7 @@ Examples
     margin: 0;
 }
 
-.example-color-disabled-grey h4, .example-color-disabled-grey p, .example-color-sand h4, .example-color-sand p {
+.example-color-disabled-grey h4, .example-color-disabled-grey p, .example-color-sand h4, .example-color-sand p,.example-color-success-green h4, .example-color-success-green p {
     color: var(--color-sand-dark);
 }
 
@@ -1197,8 +1229,203 @@ li {
 }
 
 /*=================================================
+Notification
+=================================================*/
+
+.notification {
+    border-radius: .4rem;
+    display: flex;
+    max-width: 25rem;
+    padding: 0;
+}
+
+.notification img {
+    background-color: rgba(0,0,0,.2);
+    border-radius: .4rem 0 0 .4rem;
+    padding: .5rem;
+}
+
+.notification div {
+    margin-left: 1rem;
+}
+
+.notification p {
+    color: white;
+    font-size: var(--size-one-up);
+    margin: 2rem 1rem .5rem 0;
+}
+
+.notification input {
+    background-color: white;
+    border: none;
+    margin: 1rem;
+}
+
+.notification input:hover {
+    animation: none;
+    box-shadow: var(--shadow-hover);
+}
+
+.notification-error input:hover {
+    background-color: white;
+    color: var(--color-error-red);
+}
+
+.notification-warning input:hover {
+    background-color: white;
+    color: var(--color-warning-orange);
+}
+
+.notification-neutral input:hover {
+    background-color: var(--color-sand-dark); 
+    color: var(--color-skyblue-light);
+}
+
+.notification-success input:hover {
+    background-color: var(--color-sand-dark);
+    color: var(--color-success-green);
+}
+
+.notification-error input {
+    color: var(--color-error-red);
+}
+
+.notification-warning input {
+    color: var(--color-warning-orange);
+}
+
+.notification-neutral input {
+    color: var(--color-skyblue-light);
+}
+
+.notification-success input {
+    color: var(--color-success-green);
+}
+
+.notification-button-confirm {
+    opacity: .95;
+}
+
+.notification .notification-button-deny {
+    background-color: rgba(0,0,0,0.0);
+    border: 2px solid white; 
+    color: white;
+    opacity: .95;
+}
+
+
+.notification-error {
+    background-color: var(--color-error-red);
+}
+
+.notification-warning {
+    background-color: var(--color-warning-orange);
+}
+
+.notification-neutral {
+    background-color: var(--color-skyblue-light);
+}
+
+.notification-neutral p {
+    color: var(--color-sand-dark);
+}
+
+.notification-neutral .notification-button-confirm, .notification-success .notification-button-confirm {
+    background-color: var(--color-sand-dark);
+}
+
+.notification-neutral .notification-button-deny, .notification-success .notification-button-deny {
+    border-color: var(--color-sand-dark);
+    color: var(--color-sand-dark);
+}
+
+.notification-success {
+    background-color: var(--color-success-green);
+}
+
+.notification-success p {
+    color: var(--color-sand-dark);
+}
+
+@keyframes text-fade-in-dark {
+
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: var(--color-sand-dark);
+    }
+}
+
+/*=================================================
+Hero Component
+=================================================*/
+
+.hero {
+    background-color: var(--color-sand);
+    background-image: url(images/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.hero h1 {
+    border: none;
+    color: var(--color-sand);
+    margin: 0;
+    max-width: 40rem;
+}
+
+.hero p {
+    color: var(--color-sand);
+    font-size: var(--size-one-up);
+    margin: 0;
+    max-width: 40rem;
+}
+
+.hero-text {
+    background-color: rgba(91,142,168,.5);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 35rem;
+    padding: 1rem;
+}
+
+.hero-text input {
+    background-color: rgba(0,0,0,.1);
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-text input:hover {
+    animation: none;
+    box-shadow: none;
+    background-color: rgba(255,255,255,.2);
+    color: white;
+}
+
+.hero-text input:focus {
+    background-color: rgba(255,255,255,.5);
+    color: rgba(0,0,0,.6);
+}
+
+.hero-screenshot {
+    max-width: 100%;
+}
+
+/*=================================================
 Master Layout 
 =================================================*/
+
 html {
     scroll-behavior: smooth;
 }
@@ -1221,9 +1448,8 @@ section {
 @media ( min-width: 1240px ) {
 
     main {
-        padding-bottom: 5rem;
+        padding: 5rem 0;
         position: relative;
-        top: 89.5px;
     }
 }
 
