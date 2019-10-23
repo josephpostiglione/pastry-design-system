@@ -1251,7 +1251,6 @@ Notification
 
 .notification p {
     color: white;
-    font-size: var(--size-one-up);
     margin: 2rem 1rem .5rem 0;
 }
 
