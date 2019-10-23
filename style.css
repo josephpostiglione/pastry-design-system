@@ -1399,20 +1399,25 @@ Hero Component
     padding: 1rem;
 }
 
-.hero-text input {
+.hero-text a {
     background-color: rgba(0,0,0,.1);
     border: 2px solid white;
+    border-radius: .4rem;
     color: white;
+    font-size: var(--size-one-up);
+    margin: 1rem 1rem 1rem 0;
+    padding: .5rem 1rem;
 }
 
-.hero-text input:hover {
+.hero-text a:hover {
     animation: none;
     box-shadow: none;
     background-color: rgba(255,255,255,.2);
     color: white;
+    text-shadow: none;
 }
 
-.hero-text input:focus {
+.hero-text a:focus {
     background-color: rgba(255,255,255,.5);
     color: rgba(0,0,0,.6);
 }
