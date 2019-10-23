@@ -1257,7 +1257,7 @@ Notification
 .notification input {
     background-color: white;
     border: none;
-    margin: 1rem;
+    margin: 0 1rem .5rem;
 }
 
 .notification input:hover {
