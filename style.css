@@ -1016,6 +1016,7 @@ select {
     background-color: white;
 }
 
+
 .form-error {
     border: 1px solid red;
 }
@@ -1190,6 +1191,9 @@ input[type=range]:focus::-ms-fill-upper {
     background: #9DD7F4;
 }
 
+.search-container button:hover {
+    box-shadow: none;
+}
 
 @keyframes text-fade-in-coral {
 
