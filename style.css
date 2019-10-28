@@ -211,6 +211,11 @@ header li {
         right: 0;
         z-index: 1;
     }
+
+    .navigation-primary {
+        position: relative;
+    }
+
 }
 
 /*=================================================
@@ -416,8 +421,10 @@ footer li {
 footer a {
     color: var(--color-coral-dark);
     display: inline-block;
+    font-size: 1rem;
     padding: .25rem;
-    text-decoration: underline;
+    text-decoration: none;
+    text-shadow: none;
 }
 
 footer a:visited {
@@ -425,7 +432,8 @@ footer a:visited {
 }
 
 footer a:hover {
-    color: var(--color-coral);
+    border-bottom: none;
+    color: var(--color-sand-dark);
     text-shadow: none;
 }
 
@@ -965,8 +973,7 @@ input, textarea, select {
     display: block;
     font-size: 1rem;
 	margin: 0;
-    min-width: 50%;
-    max-width: 100%;
+    min-width: 60%;
     padding: .5rem;
     transition: all .3s ease-in-out;
 	-webkit-appearance: none;
