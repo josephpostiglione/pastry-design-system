@@ -1076,6 +1076,20 @@ input[type="submit"]:active, button[type="submit"]:active {
     border-left: none;
     cursor: pointer;
     margin: 0;
+    padding: .5rem .75rem;
+}
+
+.search-container svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-search-fill {
+    stroke: white;
+}
+
+button:hover .icon-search-fill {
+    stroke: var(--color-skyblue);
 }
 
 .search-container button[type="submit"]:hover {
@@ -1104,7 +1118,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    background: #9DD7F4;
+    background-color: #9DD7F4;
     border: 0px solid #000000;
     border-radius: 1px;
     box-shadow: 1px 1px 0px #5B8EA8;
