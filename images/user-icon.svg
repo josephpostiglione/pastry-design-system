@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>user-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M100,20 C127.614237,20 150,42.3857625 150,70 C150,97.6142375 127.614237,120 100,120 C72.3857625,120 50,97.6142375 50,70 C50.0314117,42.3987841 72.3987841,20.0314117 100,20 L100,20 Z M100,0 C61.3400675,0 30,31.3400675 30,70 C30,108.659932 61.3400675,140 100,140 C138.659932,140 170,108.659932 170,70 C170,31.3400675 138.659932,0 100,0 Z M200,280 L180,280 L180,230 C179.967489,202.39924 157.60076,180.032511 130,180 L70,180 C42.3992404,180.032511 20.0325114,202.39924 20,230 L20,280 L0,280 L0,230 C0.0451860542,191.3588 31.3587997,160.045186 70,160 L130,160 C168.6412,160.045186 199.954814,191.3588 200,230 L200,280 Z" id="path-1"></path>
+    </defs>
+    <g id="user-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="300" height="300"></rect>
+        <g id="icon/user/user/32" transform="translate(50.000000, 10.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="icon-color" fill="#403E3C" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
