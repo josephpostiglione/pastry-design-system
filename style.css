@@ -1505,7 +1505,7 @@ Article Card Component
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-template-rows: repeat(6, minmax(300px,400px));
+    grid-template-rows: repeat(4, minmax(300px,400px));
     justify-items: center;
     margin: 1rem;
 }
