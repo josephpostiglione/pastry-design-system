@@ -134,6 +134,10 @@ small {
     color: var(--color-sand);
 }
 
+.site-logo:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 1px 0 var(--color-coral-light), 2px 2px 0 var(--color-coral-dark);
+}
 
 .paragraph-featured {
     font-size: var(--size-one-up);
@@ -337,6 +341,7 @@ nav a:hover {
 
 .side-nav a:hover {
     border-left: 2px solid var(--color-sand-dark);
+    border-bottom: none;
     text-shadow: none;
 }
 
@@ -562,6 +567,12 @@ Examples
 .example-footer {
     position: initial;
 }
+
+figure .example-card {
+    margin: 0 0 1rem;       
+    max-width: 20rem;
+}
+
 
 /*=================================================
 Link Button Component
@@ -952,7 +963,7 @@ Form Components
 =================================================*/
 
 input, textarea, select {
-    border: 1px solid var(--color-skyblue-dark);
+    border: 2px solid var(--color-skyblue);
     border-radius: .4rem;
     box-sizing: border-box;
     display: block;
@@ -1053,7 +1064,7 @@ input[type="submit"]:active, button[type="submit"]:active {
 
 .search-container button {
     background-color: var(--color-skyblue);
-    border: 1px solid var(--color-skyblue-dark);
+    border: 2px solid var(--color-skyblue);
     border-radius: 0 .4rem .4rem 0;
     border-left: none;
     cursor: pointer;
@@ -1076,10 +1087,12 @@ button:hover .icon-search-fill {
 
 .search-container button[type="submit"]:hover {
     animation: text-fade-in-skyblue .2s ease-in-out;
+    background-color: white;
     color: var(--color-skyblue);
 }
 
 input[type=search] {
+    border: 2px solid var(--color-skyblue);
     border-radius: .4rem 0 0 .4rem;
 }
 
@@ -1441,8 +1454,6 @@ Article Card Component
     background-color: white;
     border-radius: .4rem;
     box-shadow: 0 0 4px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
-    margin: 0;
-    max-width: 35rem;
     overflow: hidden;
     padding: 0;
 }
@@ -1483,29 +1494,63 @@ Article Card Component
 }
 
 .card-article:hover {
-    animation: shadow-pop .3s ease-in-out
+    animation: shadow-pop .5s ease-in-out
 }
 
 .card-article:active {
     box-shadow: 0 0 4px rgba( 0, 0, 0, .1), 0 15px 20px -10px rgba( 0, 0, 0, .1);
 }
 
-@media ( min-width: 590px ) {
+.grid-cards {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(6, minmax(300px,400px));
+    justify-items: center;
+    margin: 1rem;
+}
 
-    .card-link {
-        display: flex;
+.main-cards {
+    max-width: none;
+}
+
+.main-cards h1 {
+    margin: 1rem auto 2rem;
+    max-width: 45rem;
+}
+
+/*large grid layout*/
+@media ( min-width: 1100px ) {
+
+    .grid-cards {
+        grid-template-rows: repeat(6, minmax(300px,440px));
     }
 
-    .card-article-text {
-        margin: 0 auto 0 1rem;
+    .card-article:first-child {
+        grid-column-end: 3;
+        grid-column-start: 1;
     }
 
-    .card-article img {
-        opacity: .8;
-        max-width: 14rem;
+    .card-article:nth-child(4n+4) {
+        grid-column-end: 4;
+        grid-column-start: 2;
+    }
+
+    .card-article:nth-child(4n+5) {
+        grid-column-end: 3;
+        grid-column-start: 1;
     }
 }
 
+/*xlarge grid layout*/
+@media ( min-width: 1370px ) {
+
+    .card-article:nth-child(4n+4) {
+        grid-column-end: 5;
+        grid-column-start: 1;
+    }
+
+}
 
 @keyframes shadow-pop {
 
@@ -1523,9 +1568,6 @@ Article Card Component
 
   }
   
-  
-
-
 /*=================================================
 Profile Card
 =================================================*/
@@ -1534,7 +1576,7 @@ Profile Card
 	background-color: white;
 	border-radius: .4rem;
     box-shadow: 0 0 2px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
-	margin: 5rem 0 0;
+	margin: 0 0 1rem;
 	max-width: 35rem;
 	padding-top: 6rem;
 	position: relative;
@@ -1578,7 +1620,7 @@ Call to Action Card
 
 .card-call-to-action {
     display: flex;
-    margin: 0;
+    margin: 0 auto 1rem;
     max-width: 18rem;
     text-align: center;
 }
@@ -1608,6 +1650,18 @@ Call to Action Card
     color: white;
 }
 
+@media ( min-width: 840px ) {
+ 
+    .cards-call-to-action {
+        display: flex;
+        margin: auto;
+        max-width: 60rem;
+    }
+
+
+}
+
+
 /*=================================================
 Master Layout 
 =================================================*/
@@ -1623,7 +1677,7 @@ body {
 main {
     margin: auto;
     max-width: 45rem;
-    padding: 2rem 1.5rem;
+    padding: 0 1rem;
 }
 
 section {
@@ -1636,11 +1690,29 @@ img {
     max-width: 100%;
 }
 
+.screenshot-link {
+    transition: all .3s ease-in-out;
+}
+
+.screenshot-link:hover {
+    box-shadow: var(--shadow-hover);
+    transition: all .3s ease-in-out;
+}
+
+.screenshot-link:active {
+    box-shadow: var(--shadow-active);
+}
+
 @media ( min-width: 1240px ) {
 
     main {
         padding: 5rem 0;
         position: relative;
+    }
+
+    .main-cards {
+        max-width: 82rem;
+        padding-top: 6rem;
     }
 }
 
