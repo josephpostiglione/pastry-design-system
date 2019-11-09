@@ -24,6 +24,7 @@ html {
     --shadow-active: 2px 1px 3px rgba(0,0,0,.2);
     --shadow-solid: 2px 2px 0 var(--color-sand-dark);
     --shadow-blockquote: 8px 8px 0 var(--color-skyblue-light);
+    --shadow-cards: 0 0 2px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
 }
 
 /*=================================================
@@ -617,7 +618,6 @@ Link Button Component
 
 .link-button-hero:hover {
     box-shadow: var(--shadow-hover);
-
 }
 
 .link-button-hero:active {
@@ -1419,28 +1419,7 @@ Hero Component
     padding: 1rem;
 }
 
-.hero-text a {
-    background-color: rgba(0,0,0,.1);
-    border: 2px solid white;
-    border-radius: .4rem;
-    color: white;
-    font-size: var(--size-one-up);
-    margin: 1rem 1rem 1rem 0;
-    padding: .5rem 1rem;
-}
 
-.hero-text a:hover {
-    animation: none;
-    box-shadow: none;
-    background-color: rgba(255,255,255,.2);
-    color: white;
-    text-shadow: none;
-}
-
-.hero-text a:focus {
-    background-color: rgba(255,255,255,.5);
-    color: rgba(0,0,0,.6);
-}
 
 .hero-screenshot {
     max-width: 100%;
@@ -1458,19 +1437,15 @@ Article Card Component
     padding: 0;
 }
 
-.card-article a {
-    cursor: pointer;
-}
-
 .card-article small {
     border-bottom: 1px solid rgba( 0, 0, 0, .3);
 }
 
 .card-article-text {
-    justify-content: center;
     color: var(--color-sand-dark);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 1rem;
     position: relative;
     text-shadow: none;
@@ -1490,6 +1465,7 @@ Article Card Component
 }
 
 .card-article img {
+    max-width: 120%;
     opacity: .8;
 }
 
@@ -1575,7 +1551,7 @@ Profile Card
 .card-profile {
 	background-color: white;
 	border-radius: .4rem;
-    box-shadow: 0 0 2px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
+    box-shadow: var(--shadow-cards);
 	margin: 0 0 1rem;
 	max-width: 35rem;
 	padding-top: 6rem;
@@ -1584,7 +1560,7 @@ Profile Card
 
 .card-profile img {
 	border-radius: 50%;
-    box-shadow: 0 0 2px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
+    box-shadow: var(--shadow-cards);
 	left: calc( 50% - 5rem );
 	margin: auto;
 	max-width: 10rem;
@@ -1628,7 +1604,7 @@ Call to Action Card
 .card-call-to-action div {
     background: linear-gradient(45deg, var(--color-skyblue-light) 0%, var(--color-skyblue) 100%);
     border-radius: .4rem;
-    box-shadow: 0 0 2px rgba( 0, 0, 0, .3), 0 15px 20px -10px rgba( 0, 0, 0, .3);
+    box-shadow: var(--shadow-cards);
     padding: 1rem;
 }
 
