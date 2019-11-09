@@ -570,6 +570,8 @@ Examples
 }
 
 figure .example-card {
+    border-radius: .4rem;
+    box-shadow: var(--shadow-cards);
     margin: 0 0 1rem;       
     max-width: 20rem;
 }
@@ -1465,7 +1467,6 @@ Article Card Component
 }
 
 .card-article img {
-    max-width: 120%;
     opacity: .8;
 }
 
