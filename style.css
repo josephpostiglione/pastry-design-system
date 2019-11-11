@@ -1597,7 +1597,7 @@ Call to Action Card
 
 .card-call-to-action {
     display: flex;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
     max-width: 18rem;
     text-align: center;
 }
