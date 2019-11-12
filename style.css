@@ -576,6 +576,10 @@ figure .example-card {
     max-width: 20rem;
 }
 
+figure .example-card-call-to-action  {
+    margin-left: 0;
+}
+
 
 /*=================================================
 Link Button Component
@@ -1597,7 +1601,7 @@ Call to Action Card
 
 .card-call-to-action {
     display: flex;
-    margin: 0 0 1rem;
+    margin: 0 auto 1rem;
     max-width: 18rem;
     text-align: center;
 }
