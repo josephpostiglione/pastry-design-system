@@ -142,7 +142,7 @@ small {
 
 .paragraph-featured {
     font-size: var(--size-one-up);
-    letter-spacing: .1em;
+    letter-spacing: .01em;
     margin: 1rem 0 1rem;
     padding: 1rem;
 }
